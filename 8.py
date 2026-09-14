@@ -1,54 +1,17 @@
-dict1 = {}
-n = int(input("Enter number of elements in first dictionary: "))
+numbers = input("Enter comma-separated numbers: ")
 
-for i in range(n):
-    key = input("Enter key: ")
-    value = int(input("Enter value: "))
-    dict1[key] = value
+my_list = numbers.split(",")
 
-dict2 = {}
-n = int(input("Enter number of elements in second dictionary: "))
+my_tuple = tuple(my_list)
 
-for i in range(n):
-    key = input("Enter key: ")
-    value = int(input("Enter value: "))
-    dict2[key] = value
+print("List:", my_list)
 
-print("Dictionary 1:", dict1)
-print("Dictionary 2:", dict2)
+print("Tuple:", my_tuple)
 
-merged_dict = {**dict1, **dict2}
+print("Total number of elements:", len(my_list))
 
-print("Merged dictionary:", merged_dict)
+print("First element:", my_list[0])
 
-sorted_dict = dict(sorted(merged_dict.items()))
+print("Last element:", my_list[-1])
 
-print("Sorted dictionary:", sorted_dict)
-
-text = input("Enter a string: ")
-
-frequency = {}
-
-for ch in text:
-    if ch in frequency:
-        frequency[ch] += 1
-    else:
-        frequency[ch] = 1
-
-print("Character frequency:", frequency)
-
-set1 = set(map(int, input("Enter elements of first set separated by space: ").split()))
-
-set2 = set(map(int, input("Enter elements of second set separated by space: ").split()))
-
-print("Set 1:", set1)
-print("Set 2:", set2)
-
-common = set1 & set2
-print("Common elements:", common)
-
-unique = set1 ^ set2
-print("Unique elements:", unique)
-
-union = set1 | set2
-print("Union:", union)
+print("List in reverse order:", my_list[::-1])
